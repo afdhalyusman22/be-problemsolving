@@ -24,16 +24,16 @@ try {
     dateActual = new Date(splitActual[2], splitActual[1], splitActual[0]);
 
     if (dateActual <= dateExpected) { //rule 1
-        console.log(0)
+        console.log(`output : 0`);
     } else if (splitExpected[2] === splitActual[2] && splitExpected[1] === splitActual[1] && splitActual[0] > splitExpected[0]) { //rule 2
         let diffTime = Math.abs(dateActual - dateExpected);
         let diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-        console.log(diffDays * finePerDay);
+        console.log(`output : ${diffDays * finePerDay}`);
     } else if (splitExpected[2] === splitActual[2] && splitActual[1] > splitExpected[1]) { //rule 3
         let diffMonth = splitActual[1] - splitExpected[1];
-        console.log(diffMonth * finePerMonth);
+        console.log(`output : ${diffMonth * finePerMonth}`);
     } else if (splitActual[2] > splitExpected[2]) { //rule 4
-        console.log(finePerYear)
+        console.log(`output : ${finePerYear}`)
     }
 } catch (error) {
     console.log(`error`, error);

@@ -20,7 +20,7 @@ try {
             if (result >= student) result = 1;
             else result = parseInt(result) + 1;
         }
-        console.log(result);
+        console.log(`output : ${result}`);
     }
 } catch (error) {
     console.log(`error`, error);
